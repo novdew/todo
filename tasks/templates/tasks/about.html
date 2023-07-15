@@ -1,0 +1,12 @@
+{% extends 'tasks/base.html' %}
+{% block content %}
+<div class="col-md-8 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{task.name}}</h2>
+            <p class="blog-post-meta">{{task.created_at}}</p>
+            <p>{{task.description}}</p>
+              <a href="{% url 'update' task.pk %}">Edit</a>
+              <a href="{% url 'delete' task.pk %}">Delete</a>
+          </div>
+</div>
+{% endblock %}
